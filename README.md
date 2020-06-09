@@ -40,3 +40,28 @@ All the columns have been segmented in some categories wherever it was possible.
 
 *Categorical Variable (Nominal and Ordinal) treatment* 
 > After treating the missing data, Ordinal variables were encoded based on their levels into a suitable number and it was changed to Categorical data type. In case of Nominal, distribution of the categorical level within the variable was checked. It was checked if all the levels that can be possible based on Data Description are present. If all the levels are not present, then it was checked if the description contained ‘Other’ category. If yes, then levels with least distribution and levels which were not present were put to ‘Other’ category. If no, ‘Other’ category was created and then levels with least distribution and levels which were not present were put to ‘Other’ category.
+
+Click on the below code file to access the Data Preparation Code for further details:
+
+- [Training Splitted Data Preparation](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Train_House_V2.py)
+- [Validation Data Preparation](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Validation_House.py)
+- Training All Data Preparation
+- Testing Data Preparation
+
+
+### Feature Engineering
+
+- There were 4 bathroom variables. Individually, these variables were not very important. However, they were added up into one predictor named ‘Total number of Bathrooms’, this predictor became a strong one. The new feature had correlation of 0.631 with the target variable.
+
+- Time Related Features
+
+> There are 3 features related to year such as YearBuilt (Original construction date), YearRemodAdd (Remodel date ,same as construction date if no remodeling or additions) and YrSold (Year Sold (YYYY)). An age column (age = YrSold - YearRemodAdd) is created. YrSold is kept as it is, to capture the effect of the year when it is being sold. However, as parts of old constructions will always remain and only parts of the house might have been renovated, so, a column=Remodeled (value=Yes/No) is created. This should be seen as some sort of penalty parameter that indicates that if the Age is based on a remodeling date, it is probably worth less than houses that were built from scratch in that same year. A new column ‘IsNew’ is created which indicates ‘yes’ if the YearBuilt = YrSold and otherwise 'No'. After creating these 3 new columns/features, YearBuilt and YearRemodAdd were removed.
+
+- Neighbourhood variable was binned. A bar chart of Neighbourhood with SalePrice wa plotted and it was noted that both the median and mean of Saleprice agree on 3 neighborhoods with substantially higher saleprices and 3 neighborhoods with low SalePrice. So, they were being put into high and low category respectively. Other neighborhoods were less clear, and Since they could have been ‘overbinned’, they were left as it is.
+
+- As the total living space generally is very important when people buy houses, a predictor ‘TotalSqFeet’ was added that adds up the living space above (GrLivArea) and below ground (TotalBsmtSF). Also TotalBsmtSF was removed to avoid multicollinearity as GrLivArea had less correlation with target as compared to TotalBsmtSF.
+
+- There were 5 variable related to Porch such as WoodDeckSF (Wood deck area in square feet), OpenPorchSF (Open porch area in square feet), EnclosedPorch (Enclosed porch area in square feet), 3SsnPorch (Three season porch area in square feet), ScreenPorch (Screen porch area in square feet). These all Porch variables were consolidated to one varaible called 'TotalPorchSF'.
+
+
+
