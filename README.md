@@ -22,13 +22,16 @@ Click to access the below files:
 - [House_price_test](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/House_price_test.csv)
 
 ### Data Visualization
-I have tried to visualize all the important variables. This can help one to quickly get some insights about the data and can also help a person to decide a roadmap to proceed further. Click to access the [Visalization File](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Train_House_Visualization_important_variables.ipynb)
+I have tried to visualize all the important variables. This can help one to quickly get some insights about the data and can also help a person to decide a roadmap to proceed further. Click to access the [Visualization File](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Train_House_Visualization_important_variables.ipynb)
 
 ### Splitting data into Training and Validation set
 Stratified sampling has been used to split the data bewteen training and validation set. The most highly correlated categorical variable (OverallQual) with the target has been used as a basis for sampling.
 
 ### Data Preparation
 All the columns have been segmented in some categories wherever it was possible.
+
+*Outlier Treatment*
+> Whenever there was an outlier in a variable, we tried to print all corresponding data in its related variables. Suppose variable X shows category1. then we check the distribution of column where we are checking outlier based on category1 in column X, we would check if the value that we are calling outlier is occuring most of the time or not. If yes then its not an outlier and if no then its an outlier and we need further investigation if we need to drop it or not. In this project there were outliers in column GrLivArea and the value was not occuring most of the time. So it was decided to drop them.
 
 *Missing Value Treatment*
 
