@@ -48,8 +48,8 @@ Click on the below code file to access the Data Preparation Code for further det
 
 - [Training Splitted Data Preparation](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Train_House_V2.py)
 - [Validation Data Preparation](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Validation_House.py)
-- Training All Data Preparation
-- Testing Data Preparation
+- [Training All Data Preparation](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Train_All_House.py)
+- [Testing Data Preparation](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Test_House_V1.py)
 
 
 ### Feature Engineering
@@ -86,10 +86,9 @@ correlations matrix has been used. For instance: GarageCars and GarageArea had a
 
 
 Click on the following code file to see more details:
-- Training Splitted Feature Engineering
-- Validation Feature Engineering
-- Training All Feature Engineering
-- Testing Feature Engineering
+- [Training All & Splitted Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Train_House_AllAndSplitted_Feature_Engineering_V3.py)
+- [Validation Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Validation_House_Feature_Engineering.py)
+- [Testing Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Test_House_Feature_Engineering_V1.py)
 
 
 ### Model Performance
