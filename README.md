@@ -66,5 +66,22 @@ Click on the below code file to access the Data Preparation Code for further det
 
 - There were 5 variable related to Porch such as WoodDeckSF (Wood deck area in square feet), OpenPorchSF (Open porch area in square feet), EnclosedPorch (Enclosed porch area in square feet), 3SsnPorch (Three season porch area in square feet), ScreenPorch (Screen porch area in square feet). These all Porch variables were consolidated to one varaible called 'TotalPorchSF'.
 
+### Preparing data for modeling
+
+- Dropping Correlated Vraibles
+> To avoid multicollinearity, two variables with high correlation were dropped. To find these correlated pairs, 
+correlations matrix has been used. For instance: GarageCars and GarageArea had a correlation of 0.89. Of those two, the variable with the lowest correlation with SalePrice was dropped (which is GarageArea with a SalePrice correlation of 0.62. GarageCars has a SalePrice correlation of 0.64).
+
+- Skewness 
+> - Skewness is a measure of the symmetry in a distribution. A symmetrical dataset will have a skewness equal to 0. So, a normal distribution will have a skewness of 0. Skewness essentially measures the relative size of the two tails. As a rule of thumb, skewness should be between -1 and 1. In this range, data are considered fairly symmetrical
+> - In order to fix the skewness, log was applied for all numeric predictors with an absolute skew greater than 0.8 (actually: log+1, to avoid division by zero issues).
+
+- Data Normalization and Data Standardization
+> - Data Normalization - Normalization refers to rescaling real valued numeric attributes into the range 0 and 1. It is useful to scale the input attributes for a model that relies on the magnitude of values, such as distance measures used in k-nearest neighbors and in the preparation of coefficients in regression
+> - Data Standardization - Standardization refers to shifting the distribution of each attribute to have a mean of zero and a standard deviation of one (unit variance). It is useful to standardize attributes for a model that relies on the distribution of attributes such as Gaussian processes. 
+> - It was decided to go with Standardization
+
+- One hot encoding the categorical variables
+> After this there are 21 categorical columns and in total of 74 columns including nominal
 
 
