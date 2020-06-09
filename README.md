@@ -13,7 +13,7 @@ As this is a Regression problem. The project shows performance of several Machin
 
 ### Dataset Description
 
-There are 2 separate files for training and testing the data. Training dataset contains 1469 records and 79 explanatory variables describing (almost) every aspect of residential homes and Sales Price as target. The same goes with testing dataset except it does not contain the target variable. This dataset contains information of the residential houses in Ames and Iowa.
+There are 2 separate files for training and testing the data. Training dataset contains 1460 records and 79 explanatory variables describing (almost) every aspect of residential homes and Sales Price as target. There were 36 numerical variables,  43 categorical variable (nominal and ordinal) and a numeric target variable (SalePrice). The same goes with testing dataset except it does not contain the target variable. This dataset contains information of the residential houses in Ames and Iowa.
 There is also a file that contains the column description with each and every details. 
 
 Click to access the below files: 
@@ -82,7 +82,7 @@ correlations matrix has been used. For instance: GarageCars and GarageArea had a
 > - It was decided to go with Standardization
 
 - One hot encoding the categorical variables
-> After this there are 21 categorical columns and in total of 74 columns including nominal
+> After this there are 21 categorical columns and in total of 74 columns including nominal. In total there were 225 independent variables.
 
 
 Click on the following code file to see more details:
@@ -90,6 +90,11 @@ Click on the following code file to see more details:
 - [Validation Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Validation_House_Feature_Engineering.py)
 - [Testing Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Test_House_Feature_Engineering_V1.py)
 
+Click on the following file generated after feature engineering to see more details:
+- [Training Splitted Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/df_train_Splitted_V1.csv)
+- [Validation Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/df_validation_FeatEngg_9.csv)
+- [Training All Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/df_train_ALL_FeatEngg_8.csv)
+- [Testing Feature Engineering](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/df_test_FeatEngg_9_V2.csv)
 
 ### Model Performance
 
