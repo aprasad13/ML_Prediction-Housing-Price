@@ -85,3 +85,32 @@ correlations matrix has been used. For instance: GarageCars and GarageArea had a
 > After this there are 21 categorical columns and in total of 74 columns including nominal
 
 
+Click on the following code file to see more details:
+- Training Splitted Feature Engineering
+- Validation Feature Engineering
+- Training All Feature Engineering
+- Testing Feature Engineering
+
+
+### Model Performance
+
+| Model               | Stochastic | PCA      | Training RMSE             | Validation RMSE       |
+| -------------       | ---------- | ----     |    --------               | -------------         |
+| Linear Regression   | No         | No       | 878549133.2543052         | 23736807855.154545    |
+| Linear Regression   | Yes        | No       | NA                        | 0.903577214121022     |
+| Linear Regression   | No         | Yes      | 0.11710506977706689       | 0.21866147149548182   |
+| Linear Regression   | Yes        | Yes      | NA                        | 0.23171273738088263   |
+| Ridge Regression    | No         | No       | 0.11382586579804059       | 0.15502651269939982   |
+| Ridge Regression    | Yes        | No       | 0.2555794950868803        | 0.28638961850775196   |  
+| Ridge Regression    | No         | Yes      | 0.11673464401746662       | 0.2159260272536825    |
+| Ridge Regression    | Yes        | Yes      | 0.2989778654057608        | 0.3184118909709933    |
+| Lasso Regression    | No         | No       | 0.11345006473735222       | 0.14954863164942334   |
+| Lasso Regression    | Yes        | No       | 0.49130498580778337       | 0.8093628575728181    |
+| Lasso Regression    | No         | Yes      | 0.11676191996399303       | 0.21583738578178066   |
+| Lasso Regression    | Yes        | Yes      | 0.12214815903906791       | 0.22022969724341554   |
+| Elastic Net         | No         | No       | 0.11347339693559097       | 0.14888627346166744   |
+| Elastic Net         | No         | Yes      | 0.11675505949345945       | 0.21613504090408497   |
+| Random Forest       | No         | No       | 0.12903180245135284       | 0.14272532051839343   |
+| Random Forest       | No         | Yes      | 0.1418293940827534        | 0.1890364900292125    |
+| Gradient Boost      | No         | No       | 0.11996227721676053       | 0.14045639753683603   |
+| Gradient Boost      | No         | Yes      | 0.14648460664021323       | 0.19501973484749527   |
