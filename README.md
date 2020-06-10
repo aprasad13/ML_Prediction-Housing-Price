@@ -118,3 +118,22 @@ Click on the following file generated after feature engineering to see more deta
 | Random Forest       | No         | Yes      | 0.1418293940827534        | 0.1890364900292125    |
 | Gradient Boost      | No         | No       | 0.11996227721676053       | 0.14045639753683603   |
 | Gradient Boost      | No         | Yes      | 0.14648460664021323       | 0.19501973484749527   |
+
+
+
+Based on above results we can conclude as follows:
+- Linear Regression (without SGD and without PCA) did not perform well on training and validation set
+- Linear Regression (with PCA) performed well
+- Ridge, Lasso and Elastic Net performed well without PCA
+- Tree algorithms (Random Forest and Gradient Boost) also performed well without PCA
+
+Based on above results, it can be concluded that there are following 3 Models which performed better than other.Click on the link to access the predicted results (SalePrice) using following algorithms::
+- [Lasso Regression without PCA](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Lasso_Prediction.csv)
+- [Random Forest without PCA](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/RandomForest_Prediction.csv)
+- [Gradient Boost without PCA](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/GradientBoost_Prediction.csv)
+- [Prediction_Lasso_RF_GradBoost](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/Prediction_Lasso_RF_GradBoost.csv)
+
+Click on the below prediction code file to see more details:
+- [House Validation Without PCA](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/House_Prediction_V2.py)
+- [House Validation With PCA](https://github.com/aprasad13/Prediction-Housing-Price/blob/master/House_Prediction_PCA_Transformed.py)
+
